@@ -6,7 +6,6 @@ namespace SharpEagle
 {
     public interface ITemplateTagAction
     {
-        string TagText();
-        string Action(Object[] contextData);
+        string Action(List<ITemplateTag> context, List<string>args = null);
     }
 }

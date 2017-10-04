@@ -6,7 +6,6 @@ namespace SharpEagle
 {
     public interface ITemplateTag 
     {
-        string TagText();
-        string Value();
+        string Value { get; set; }
     }
 }

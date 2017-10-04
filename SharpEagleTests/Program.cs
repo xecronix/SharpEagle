@@ -29,7 +29,7 @@ namespace SharpEagleTests
                 }
                 else
                 {
-                    Console.Out.Write(testOutput + " , ");
+                    Console.Out.Write(testOutput + "");
                 }
                 
             }
