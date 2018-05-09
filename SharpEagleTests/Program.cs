@@ -39,6 +39,7 @@ namespace SharpEagleTests
         {
             SharpEagleTester tester = new SharpEagleTester();
             tester.Add(new TestSubstitutionTag());
+            tester.Add(new TestActionTag());
 
             tester.Test();
             Console.In.ReadLine();

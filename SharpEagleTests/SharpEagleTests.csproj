@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseTest.cs" />
     <Compile Include="ISharpEagleTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestActionTag.cs" />
     <Compile Include="TestSubstitutionTag.cs" />
   </ItemGroup>
   <ItemGroup>

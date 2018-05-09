@@ -7,67 +7,16 @@ using SharpEagle;
 
 namespace SharpEagleTests
 {
-    class TestSubstitutionTag : ISharpEagleTest
+    class TestSubstitutionTag : BaseTest, ISharpEagleTest
     {
-        SharpEagle.Template Eagle = new SharpEagle.Template();
-        List<ISharpEagleTest> Tests = new List<ISharpEagleTest>();
-        public bool Test(out string testResult)
+        public TestSubstitutionTag()
         {
-            int fail = 0;
-            int pass = 0;
-            bool retval = true;
-            Tests.Add(new SimpleSubstitutionTest());
-            Tests.Add(new OpenTagTest());
-            Tests.Add(new IgnoreOpenSymbolTest());
-            Tests.Add(new IgnoreWhiteSpaceTest());
-            Tests.Add(new MissingSubstitutionTagTest());
-            testResult = "";
-            int testNumber = 0;
-
-            foreach (ISharpEagleTest test in Tests)
-            {
-                testNumber++;
-                try
-                {
-                    string results = "";
-                    if (test.Test(out results) == true)
-                    {
-                        Console.Out.Write(".");
-                        pass++;
-                    }
-                    else
-                    {
-                        Console.Out.WriteLine("");
-                        Console.Out.WriteLine(results);
-                        testResult += results + System.Environment.NewLine;
-                        fail++;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    fail++;
-                    string err = string.Format("ERROR: {0}{1}", test.GetType().Name, System.Environment.NewLine);
-                    testResult += err + ex.ToString() + System.Environment.NewLine;
-                }
-            }
-
-            Console.Out.Write("\nTestSubstitutionTag: ");
-            if (fail > 0)
-            {
-                Console.Out.WriteLine("FAIL");
-            }
-            else
-            {
-                Console.Out.WriteLine("PASS");
-            }
-
-            Console.Out.WriteLine(string.Format("\tFail: {0}", fail));
-            Console.Out.WriteLine(string.Format("\tPass: {0}", pass));
-
-            retval = fail == 0;
-            return retval;
+            AddTest(new SimpleSubstitutionTest());
+            AddTest(new OpenTagTest());
+            AddTest(new IgnoreOpenSymbolTest());
+            AddTest(new IgnoreWhiteSpaceTest());
+            AddTest(new MissingSubstitutionTagTest());
         }
-        
     }
 
     public class SimpleSubstitutionTest : ISharpEagleTest
@@ -98,7 +47,7 @@ namespace SharpEagleTests
         public bool Test(out string results)
         {
             bool pass = true;
-            string template = "This is a {=substitution: test!";
+            string template = "This is a {=substitution: test!"; //this is a bad template
             Dictionary<string, string> tags = new Dictionary<string, string>();
             tags.Add("substitution", "cool");
             try
