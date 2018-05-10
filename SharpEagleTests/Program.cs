@@ -10,6 +10,9 @@ namespace SharpEagleTests
 {
     public class SharpEagleTester
     {
+        // 
+        // Simple test runner
+        //
         List<ISharpEagleTest> Tests = new List<ISharpEagleTest>();
         public bool Add(ISharpEagleTest test) { Tests.Add(test); return true; }
         public bool Test()
