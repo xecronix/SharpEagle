@@ -1,4 +1,4 @@
-# Sharp Eagle Template Solution
+# Sharp Eagle Template Solution (SETS)
 ## Copyright (c) 2015 Ronald Weidner
 
 Permission is hereby granted, free of charge, to any person obtaining a 
