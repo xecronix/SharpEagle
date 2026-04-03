@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>SharpEagleTests</RootNamespace>
     <AssemblyName>SharpEagleTests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,9 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SharpEagle">
-      <HintPath>..\SharpEagle\bin\Debug\netcoreapp1.1\SharpEagle.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\SharpEagle\SharpEagle.csproj">
+  <Project>{681D60C3-378A-476F-BAA1-86A2E41E0244}</Project>
+  <Name>SharpEagle</Name>
+</ProjectReference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

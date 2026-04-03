@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SharpEagleDemo</RootNamespace>
     <AssemblyName>SharpEagleDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,6 +44,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+  <ProjectReference Include="..\SharpEagle\SharpEagle.csproj">
+  <Project>{681D60C3-378A-476F-BAA1-86A2E41E0244}</Project>
+  <Name>SharpEagle</Name>
+</ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
